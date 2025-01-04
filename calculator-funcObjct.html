@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<head>
+  <title>Calculator</title>
+</head>
+<body>
+  <p>
+    <button onclick="
+      updateCalculation('1');
+   ">1</button>
+
+    <button onclick="
+      updateCalculation('2');
+    ">2</button>
+
+    <button onclick="
+      updateCalculation('3');
+    ">3</button>
+
+    <button onclick="
+      updateCalculation('+');
+    ">+</button>
+  </p>
+  <p>
+    <button onclick="
+      updateCalculation('4'); 
+   ">4</button>
+
+    <button onclick="
+      updateCalculation('5');
+    ">5</button>
+
+    <button onclick="
+      updateCalculation('6');
+    ">6</button>
+
+    <button onclick="
+      updateCalculation('-');
+    ">-</button>
+  </p>
+  <p>   
+    <button onclick="
+      updateCalculation('7');
+    ">7</button>
+
+    <button onclick="
+      updateCalculation('8');
+    ">8</button>
+
+    <button onclick="
+     updateCalculation('9');
+    ">9</button>
+
+    <button onclick="
+      updateCalculation('*');
+    ">*</button>
+  </p>
+  <p>
+    <button onclick="
+      updateCalculation('0');
+    ">0</button>
+
+    <button onclick="
+      updateCalculation('.');
+    ">.</button>
+
+    <button onclick="
+      updateCalculation('/');
+    ">/</button>
+
+    <button onclick="
+      calcultor = eval(calcultor);
+      console.log(calcultor);
+    ">=</button>
+  </p>
+  <button onclick="
+    calcultor = '';
+    console.log(calcultor)
+  ">clear</button>
+
+  <script>
+    let calcultor = localStorage.getItem('calcultor') || '';
+
+    function updateCalculation(value) {
+      calcultor += value;
+      console.log(calcultor);
+      localStorage.setItem('calcultor', calcultor);
+    }
+    function saveCalcultor() {
+      localStorage.setItem('calcultor', calcultor); 
+    }
+  </script>
+</body>
